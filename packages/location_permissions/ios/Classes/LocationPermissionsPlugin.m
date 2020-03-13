@@ -190,10 +190,10 @@
         case kCLAuthorizationStatusNotDetermined:
           return PermissionStatusUnknown;
         case kCLAuthorizationStatusRestricted:
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
           return PermissionStatusRestricted;
         case kCLAuthorizationStatusDenied:
           return PermissionStatusDenied;
-        case kCLAuthorizationStatusAuthorizedWhenInUse:
         case kCLAuthorizationStatusAuthorizedAlways:
           return PermissionStatusGranted;
       }
@@ -203,11 +203,11 @@
       case kCLAuthorizationStatusNotDetermined:
         return PermissionStatusUnknown;
       case kCLAuthorizationStatusRestricted:
+      case kCLAuthorizationStatusAuthorizedWhenInUse:
         return PermissionStatusRestricted;
       case kCLAuthorizationStatusDenied:
         return PermissionStatusDenied;
       case kCLAuthorizationStatusAuthorizedAlways:
-      case kCLAuthorizationStatusAuthorizedWhenInUse:
         return PermissionStatusGranted;
     }
   }
